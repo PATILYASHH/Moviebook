@@ -120,7 +120,8 @@ function openSellModal() {
     const modal = document.getElementById('sellTicketModal');
     if (modal) {
         modal.classList.add('active');
-        modal.style.display = 'flex';
+        // Disable background scroll
+        document.body.classList.add('modal-open');
     }
 }
 
@@ -128,7 +129,8 @@ function closeSellModal() {
     const modal = document.getElementById('sellTicketModal');
     if (modal) {
         modal.classList.remove('active');
-        modal.style.display = 'none';
+        // Re-enable background scroll
+        document.body.classList.remove('modal-open');
     }
 }
 
@@ -164,5 +166,15 @@ window.addEventListener('click', function(e) {
     }
     if (sellModal && e.target === sellModal) {
         closeSellModal();
+    }
+});
+
+// Close modal with Escape key
+window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const sellModal = document.getElementById('sellTicketModal');
+        if (sellModal && sellModal.classList.contains('active')) {
+            closeSellModal();
+        }
     }
 });

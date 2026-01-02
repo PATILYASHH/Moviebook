@@ -46,17 +46,17 @@
                 <div class="sales-summary">
                     <div class="summary-card total">
                         <h3>Total Sales</h3>
-                        <p class="amount">$12,450</p>
+                        <p class="amount">₹12,450</p>
                         <span class="tickets">342 tickets</span>
                     </div>
                     <div class="summary-card online">
                         <h3>Online Sales</h3>
-                        <p class="amount">$9,860</p>
+                        <p class="amount">₹9,860</p>
                         <span class="tickets">271 tickets</span>
                     </div>
                     <div class="summary-card counter">
                         <h3>Counter Sales</h3>
-                        <p class="amount">$2,590</p>
+                        <p class="amount">₹2,590</p>
                         <span class="tickets">71 tickets</span>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                                 <p class="movie-title">12 Angry Men</p>
                                 <div class="sell-stats">
                                     <span>85/100 sold</span>
-                                    <span>$1,250</span>
+                                    <span>₹1,250</span>
                                 </div>
                                 <button class="btn-sell-ticket">Sell Ticket</button>
                             </div>
@@ -88,7 +88,7 @@
                                 <p class="movie-title">Inception</p>
                                 <div class="sell-stats">
                                     <span>92/100 sold</span>
-                                    <span>$1,380</span>
+                                    <span>₹1,380</span>
                                 </div>
                                 <button class="btn-sell-ticket">Sell Ticket</button>
                             </div>
@@ -101,7 +101,7 @@
                                 <p class="movie-title">The Dark Knight</p>
                                 <div class="sell-stats">
                                     <span>60/100 sold</span>
-                                    <span>$900</span>
+                                    <span>₹900</span>
                                 </div>
                                 <button class="btn-sell-ticket">Sell Ticket</button>
                             </div>
@@ -120,7 +120,7 @@
                                 <p class="movie-title">Pulp Fiction</p>
                                 <div class="sell-stats">
                                     <span>78/120 sold</span>
-                                    <span>$1,170</span>
+                                    <span>₹1,170</span>
                                 </div>
                                 <button class="btn-sell-ticket">Sell Ticket</button>
                             </div>
@@ -133,7 +133,7 @@
                                 <p class="movie-title">Interstellar</p>
                                 <div class="sell-stats">
                                     <span>120/120 sold</span>
-                                    <span>$1,800</span>
+                                    <span>₹1,800</span>
                                 </div>
                                 <button class="btn-sell-ticket" disabled>Housefull</button>
                             </div>
@@ -152,7 +152,7 @@
                                 <p class="movie-title">The Matrix</p>
                                 <div class="sell-stats">
                                     <span>95/100 sold</span>
-                                    <span>$1,425</span>
+                                    <span>₹1,425</span>
                                 </div>
                                 <button class="btn-sell-ticket">Sell Ticket</button>
                             </div>
@@ -168,7 +168,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Sell Ticket</h2>
-                <button class="btn-close" onclick="closeSellModal()">
+                <button class="btn-close" onclick="closeSellModal()" type="button">
                     <i class="bi bi-x-lg"></i>
                 </button>
             </div>
@@ -193,7 +193,7 @@
                     <div class="price-summary">
                         <div class="price-row">
                             <span>Ticket Price:</span>
-                            <span>$15.00</span>
+                            <span>₹150</span>
                         </div>
                         <div class="price-row">
                             <span>Quantity:</span>
@@ -201,13 +201,15 @@
                         </div>
                         <div class="price-row total">
                             <span>Total:</span>
-                            <span>$15.00</span>
+                            <span>₹150</span>
                         </div>
                     </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary" onclick="closeSellModal()">Cancel</button>
-                        <button type="submit" class="btn-primary">Confirm Sale</button>
-                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <form class="form-actions" id="sellTicketForm" style="width: 100%;">
+                    <button type="button" class="btn-secondary" onclick="closeSellModal()" style="flex: 1;">Cancel</button>
+                    <button type="submit" class="btn-primary" style="flex: 1;">Confirm Sale</button>
                 </form>
             </div>
         </div>
