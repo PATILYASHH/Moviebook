@@ -1,5 +1,15 @@
 // Profile Page JavaScript
 
+// Handle sign out
+function handleSignOut() {
+    if (confirm('Are you sure you want to sign out?')) {
+        // Clear any session/local storage if needed
+        localStorage.clear();
+        // Redirect to login page
+        window.location.href = '../auth/login.html';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Tab switching functionality
     const tabBtns = document.querySelectorAll('.tab-btn');
